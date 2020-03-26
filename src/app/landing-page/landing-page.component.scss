@@ -1,0 +1,37 @@
+.view {
+  background: url(../../assets/images/moon.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  .text {
+    font-size: 45px;
+    line-height: 108px;
+    .highlight {
+      color: #e25663;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .view {
+    .text {
+      transform: translateX(265px);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .view {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 450px) {
+  .view {
+    background: url(../../assets/images/moon-phone.jpg) no-repeat center center;
+    background-size: cover;
+    .text {
+      font-size: 42px;
+      line-height: 48px;
+    }
+  }
+}
