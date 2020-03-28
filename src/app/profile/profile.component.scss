@@ -1,5 +1,40 @@
 .js-profile-component {
-  background: url(../../assets/images/moon-cloud.jpg) no-repeat center center;
-  background-size: cover;
-  min-height: 100vh;
+  background: url(../../assets/images/bg-5.jpg) no-repeat center center/cover;
+  //background: url(http://findmatthew.com/style/../img/filler.png) center center/cover;
+  color: #fff;
+  min-height: calc(100vh + 53px);
+  padding: 130px 0;
+  .header {
+    font-size: 48px;text-align: center;
+  }
+  .label-wrap {
+    margin-top: 100px;
+  }
+  .skills-wrapper {
+    align-items: flex-start;
+    width: 100%;
+
+  }
+  .skill-who, .skill-chart {
+    width: 420px;
+    height: 420px;
+  }
 }
+
+@media screen and (min-width: 960px) {
+  .skills-wrapper {
+    margin: 50px 0 0 0;
+    justify-content: space-evenly;
+    background-color: rgba(255,255,255,1);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .header-bar {
+    margin: 0 auto;
+    background: rgba(228, 248, 248, 0.79);
+    height: 4px;
+    width: 120px;
+  }
+}
+

@@ -1,3 +1,31 @@
 <div class="js-profile-component">
-
+  <div class="header waypoint animated slide-in-left" data-animation="slide-in-left">
+    Profile
+  </div>
+  <div class="header-bar waypoint animated slide-in-left" data-animation="slide-in-left" data-delay=".5s"
+       style="animation-delay: 0.5s;"></div>
+  <div class="flex row label-wrap">
+    <div class="flex row-gt-sm">
+      <app-bullet bulletIcon="fas fa-skiing" bulletLabel="Fast" bulletDescription="
+                    Fast load times and lag free interaction, my highest
+                    priority.
+                  "></app-bullet>
+      <app-bullet bulletIcon="fab fa-buromobelexperte" bulletLabel="Responsive" bulletDescription="
+                    My layouts will work on any device, big or small.
+                  "></app-bullet>
+    </div>
+    <div class="flex row-gt-sm">
+      <app-bullet bulletIcon="fas fa-landmark" bulletLabel="Intuitive" bulletDescription="
+                    Strong preference for easy to use, intuitive UX/UI.
+                  "></app-bullet>
+      <app-bullet bulletIcon="fas fa-dice" bulletLabel="Dynamic" bulletDescription="
+                    Websites don't have to be static, I love making pages come
+            to life.
+                  "></app-bullet>
+    </div>
+  </div>
+  <div class="skills-wrapper flex row-gt-sm">
+    <app-who-am-i class="skill-who"></app-who-am-i>
+    <app-skill-chart class="skill-chart"></app-skill-chart>
+  </div>
 </div>

@@ -1,0 +1,24 @@
+.who-i-am-component {
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  justify-content: space-between;
+  color: #616161;
+.highlight {
+    color: #009ED9;
+  };
+  .jun {
+    height: 200px;
+    margin-top: 1rem;
+    background-color: rgba(105, 0, 132, .8);
+  }
+  .label.bold {
+    margin: 20px 0 15px 0;
+    font-size: 18pt;
+    font-weight: bold;
+  }
+  .about-jun {
+    padding-bottom: 1rem;
+  }
+}
+
