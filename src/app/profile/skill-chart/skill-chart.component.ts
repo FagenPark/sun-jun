@@ -23,7 +23,7 @@ export class SkillChartComponent implements OnInit {
     const myRadarChart = new Chart(ctxR, {
       type: 'radar',
       data: {
-        labels: ['CSS', 'HTML', 'Angular', 'JavaScript', 'React', 'Node.js', '.Net'],
+        labels: ['CSS', 'HTML', 'Angular', 'JavaScript/TypeScript', 'React', 'Node.js', '.Net'],
         datasets: [{
           label: 'Skill Metrics',
           data: [75, 80, 85, 85, 70, 70, 70],

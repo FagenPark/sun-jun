@@ -1,1 +1,14 @@
-<div class="js-projects-components">Projects to be listed</div>
+<div class="js-projects-component flex flex-column">
+  <app-page-header headerAnimation="slide-in-left" pageHeader="Projects"></app-page-header>
+  <div class="flex">
+    <app-project [cardUrl]="'../../assets/images/coala.jpg'" [projectTitle]="'Solar Estimator'"
+                 [projectSubTitle]="'Angular/SiteCore'"
+                 [projectUrl]="'https://www.choice.com.au/solar-estimator'"></app-project>
+    <app-project [cardUrl]="'../../assets/images/alex.jpg'" [projectTitle]="'Tab Boxes'"
+                 [projectSubTitle]="'AngularJS'"
+                 [projectUrl]="'https://maestro.avoka.com.au/web-plugin/servlet/SmartForm.html?formCode=tabcomponent'"></app-project>
+    <app-project [cardUrl]="'../../assets/images/sun_rise.jpg'" [projectTitle]="'Accordion'"
+                 [projectSubTitle]="'Javascript'"
+                 [projectUrl]="'https://maestro.avoka.com.au/web-plugin/servlet/SmartForm.html?formCode=sbaccordion'"></app-project>
+  </div>
+</div>

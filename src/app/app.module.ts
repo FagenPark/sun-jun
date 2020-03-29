@@ -14,6 +14,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { BulletComponent } from './profile/bullet/bullet.component';
 import { WhoAmIComponent } from './profile/who-am-i/who-am-i.component';
 import { SkillChartComponent } from './profile/skill-chart/skill-chart.component';
+import { ProjectComponent } from './projects/project/project.component';
+import { PageHeaderComponent } from './page-header/page-header.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { SkillChartComponent } from './profile/skill-chart/skill-chart.component
     PageNotFoundComponent,
     BulletComponent,
     WhoAmIComponent,
-    SkillChartComponent
+    SkillChartComponent,
+    ProjectComponent,
+    PageHeaderComponent
   ],
   imports: [
     BrowserModule,

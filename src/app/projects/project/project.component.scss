@@ -1,0 +1,25 @@
+.js-project-component {
+  padding: 3px;
+  background-color: #fff;
+  .project-card, .project-card-content {
+    background-size: cover;
+    background-position: center center;
+    width: 300px;
+    height: 300px;
+    justify-content: space-evenly;
+  }
+  .project-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .project-sub {
+    color: rgb(105, 0, 132);
+  }
+  .btn-link {
+    border: 2px solid #d91682;
+    &:hover {
+      background: #d91682;
+      color: #fff;
+    }
+  }
+}

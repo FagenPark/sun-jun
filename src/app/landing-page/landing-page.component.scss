@@ -3,25 +3,35 @@
   background-size: cover;
   min-height: 100vh;
   .text {
-    font-size: 45px;
-    line-height: 108px;
+    font-size: 35px;
+    line-height: 250px;
+    text-align: center;
     .highlight {
       color: #e25663;
     }
-  }
-}
-
-@media (min-width: 1200px) {
-  .view {
-    .text {
-      transform: translateX(265px);
+    p {
+      font-size: 20px;
+      line-height: 35px;
     }
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .view {
     overflow: visible;
+    .text {
+      font-size: 45px;
+      line-height: 350px;
+      text-align: right;
+      .highlight {
+        color: #e25663;
+      }
+      p {
+        font-size: 28px;
+        line-height: 45px;
+        padding-left: 25%;
+      }
+    }
   }
 }
 
@@ -30,8 +40,11 @@
     background: url(../../assets/images/moon-phone.jpg) no-repeat center center;
     background-size: cover;
     .text {
-      font-size: 42px;
-      line-height: 48px;
+      line-height: 80px;
+      p {
+        line-height: 28px;
+
+      }
     }
   }
 }
