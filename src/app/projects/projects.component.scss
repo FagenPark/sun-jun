@@ -13,6 +13,8 @@
   .js-projects-component {
     .projects-wrap {
       flex-direction: row;
+      max-width: 1050px;
+      flex-wrap: wrap;
     }
   }
 }

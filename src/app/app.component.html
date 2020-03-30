@@ -41,4 +41,6 @@
     </links>
   </mdb-navbar>
 </header>
-<router-outlet></router-outlet>
+<div [@routeAnimations]="prepareRoute(rootOutlet)">
+  <router-outlet #rootOutlet="outlet"></router-outlet>
+</div>

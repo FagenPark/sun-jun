@@ -1,10 +1,11 @@
 <div class="js-project-component" (mouseenter)="userHovering = true" (mouseleave)="userHovering = false">
-    <div class="project-card" *ngIf="!userHovering" [ngStyle]="{'background' : 'url(' + cardUrl + ') center / contain no-repeat'}"></div>
-  <div class="project-card-content flex flex-column" *ngIf="userHovering">
-    <div class="project-text">
-      <div class="project-title">{{projectTitle}}</div>
-      <span class="project-sub">{{projectSubTitle}}</span>
+    <div class="project-card" *ngIf="!userHovering"
+         [ngStyle]="{'background' : 'url(' + cardUrl + ') center / contain no-repeat'}" [@zoomFadeInOutAnimation]></div>
+    <div class="project-card-content flex flex-column" *ngIf="userHovering" [@zoomFadeInOutAnimation]>
+      <div class="project-text">
+        <div class="project-title">{{projectTitle}}</div>
+        <span class="project-sub">{{projectSubTitle}}</span>
+      </div>
+      <a class="btn btn-link" [href]="projectUrl" target="_blank">LEARN MORE</a>
     </div>
-    <a class="btn btn-link" [href]="projectUrl" target="_blank" >LEARN MORE</a>
-  </div>
 </div>

@@ -1,20 +1,27 @@
 .js-project-component {
   padding: 3px;
   background-color: #fff;
+  width: 256px;
+  height: 256px;
   .project-card, .project-card-content {
+    position: absolute;
     background-size: cover;
     background-position: center center;
     width: 250px;
     height: 250px;
     justify-content: space-evenly;
   }
-  .project-title {
-    font-size: 18px;
-    font-weight: bold;
+  .project-text {
+    text-align: center;
+    .project-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .project-sub {
+      color: rgb(105, 0, 132);
+    }
   }
-  .project-sub {
-    color: rgb(105, 0, 132);
-  }
+
   .btn-link {
     border: 2px solid #d91682;
     &:hover {
