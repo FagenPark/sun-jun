@@ -1,30 +1,66 @@
 .js-profile-component {
   background: url(../../assets/images/bg-5.jpg) no-repeat center center/cover;
-  //background: url(http://findmatthew.com/style/../img/filler.png) center center/cover;
   color: #fff;
   min-height: calc(100vh + 53px);
   padding: 130px 0;
 
   .label-wrap {
     margin-top: 100px;
+    flex-direction: column;
+    .bullet-group {
+      flex-direction: column;
+    }
   }
   .skills-wrapper {
-    align-items: flex-start;
     width: 100%;
-
+    margin: 50px 0 0 0;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255,255,255,1);
   }
-  .skill-who, .skill-chart {
+  .skill-chart, .skill-who {
+    transform: scale(0.8);
     width: 420px;
     height: 420px;
   }
 }
-
-@media screen and (min-width: 960px) {
-  .skills-wrapper {
-    margin: 50px 0 0 0;
-    justify-content: space-evenly;
-    background-color: rgba(255,255,255,1);
+@media screen and (min-width: 32px) {
+  .js-profile-component {
+    .skill-who, .skill-chart {
+      transform: scale(0.7);
+    }
   }
+}
+
+@media screen and (min-width: 812px) {
+  .js-profile-component {
+    .label-wrap {
+      flex-direction: row;
+      .bullet-group {
+        flex-direction: column;
+      }
+    }
+    .skills-wrapper {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    .skill-who, .skill-chart {
+      transform: scale(0.9);
+    }
+  }
+}
+@media screen and (min-width: 960px) {
+  .js-profile-component {
+    .label-wrap {
+      .bullet-group {
+        flex-direction: row;
+      }
+    }
+    .skill-who, .skill-chart {
+      transform: scale(1);
+    }
+  }
+
 }
 
 

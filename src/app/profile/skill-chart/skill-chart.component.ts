@@ -23,10 +23,10 @@ export class SkillChartComponent implements OnInit {
     const myRadarChart = new Chart(ctxR, {
       type: 'radar',
       data: {
-        labels: ['CSS', 'HTML', 'Angular', 'JavaScript/TypeScript', 'React', 'Node.js', '.Net'],
+        labels: ['JavaScript/TypeScript', 'HTML', 'Angular', 'React', 'CSS', 'Node.js', '.Net'],
         datasets: [{
           label: 'Skill Metrics',
-          data: [75, 80, 85, 85, 70, 70, 70],
+          data: [90, 80, 85, 70, 85, 70, 70],
           backgroundColor: [
             'rgba(105, 0, 132, .2)',
           ],

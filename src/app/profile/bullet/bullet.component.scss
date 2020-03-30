@@ -1,17 +1,12 @@
-@media screen and (min-width: 960px) {
   .bullet-wrap {
     height: 230px;
     width: 250px;
     margin: 0;
     padding: 0 10px;
-    justify-content: flex-start;
-    flex-direction: column;
   }
   .animated.flip-in-x {
     animation: flipInX 0.75s ease both;
   }
-}
-@media screen and (min-width: 600px) {
   .hex-wrap {
     height: 100px;
     width: 100px;
@@ -21,7 +16,6 @@
       }
     }
   }
-}
 .mdi {
   display: inline-block;
   font: normal normal normal 24px/1;
