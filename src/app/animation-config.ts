@@ -245,18 +245,18 @@ export const stepper = trigger('routeAnimations', [
       })
     ], optional),
     group([
-      query(':leave', [
-        animate('2600ms ease',  keyframes([
-          style({ offset: 0, transform: 'scale(0) translateX(100%)' }),
-          style({ offset: 0.3, transform: 'scale(0.5) translateX(25%)' }),
-          style({ offset: 1, transform: 'scale(1) translateX(0%)' }),
+      query(':enter', [
+        animate('1200ms ease',  keyframes([
+          style({ offset: 0, transform: 'scale(0) translateX(100%) rotate(-180deg)' }),
+          style({ offset: 0.35, transform: 'scale(0.5) translateX(25%) rotate(-120deg)' }),
+          style({ offset: 1, transform: 'scale(1) translateX(0%) rotate(0)' }),
         ]))
       ], optional),
-      query(':enter', [
-        animate('2600ms ease',  keyframes([
+      query(':leave', [
+        animate('1200ms ease',  keyframes([
           style({ offset: 0, transform: 'scale(1)' }),
-          style({ offset: 0.35, transform: 'scale(0.5) translateX(-25%) rotate(0)' }),
-          style({ offset: 1, transform: 'scale(6) translateX(-50%) rotate(-180deg)' }),
+          style({ offset: 0.35, transform: 'scale(0.5) translateX(-25%) rotate(-60deg)' }),
+          style({ offset: 1, transform: 'scale(0) translateX(-100%) rotate(-180deg)' }),
         ]))
       ], optional)
     ])
