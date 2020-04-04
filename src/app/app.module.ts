@@ -16,6 +16,9 @@ import { WhoAmIComponent } from './profile/who-am-i/who-am-i.component';
 import { SkillChartComponent } from './profile/skill-chart/skill-chart.component';
 import { ProjectComponent } from './projects/project/project.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,10 +38,23 @@ import { PageHeaderComponent } from './page-header/page-header.component';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    HttpClientModule,
     BrowserAnimationsModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient]
+      }
+    }),
     MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// AOT compilation support
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

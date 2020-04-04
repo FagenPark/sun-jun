@@ -1,5 +1,5 @@
 <div class="js-projects-component flex flex-column">
-  <app-page-header headerAnimation="slide-in-left" pageHeader="Projects"></app-page-header>
+  <app-page-header headerAnimation="slide-in-left" pageHeader="{{'projects' | translate }}"></app-page-header>
   <div class="flex projects-wrap">
     <app-project *ngFor="let project of junProjects" [cardUrl]="project.pImage" [projectTitle]="project.pTitle"
                  [projectSubTitle]="project.pSubTitle"

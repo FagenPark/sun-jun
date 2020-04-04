@@ -1,5 +1,5 @@
 <div class="js-gallery-component">
-  <app-page-header headerAnimation="slide-in-left" pageHeader="Gallery"></app-page-header>
+  <app-page-header headerAnimation="slide-in-left" pageHeader="{{'gallery' | translate }}"></app-page-header>
   <div class="gallery-container">
     <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
                   [animation]="'slide'">
@@ -7,7 +7,7 @@
         <div class="col-md-4" [ngClass]="{'d-none d-md-block': cardIndex !== 0}" *ngFor="let card of item; let cardIndex = index">
           <mdb-card class="my-1">
             <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
-            <mdb-card-body>
+            <mdb-card-body class="carousel-text">
               <mdb-card-title>
                 <h4>{{card.title}}</h4>
               </mdb-card-title>

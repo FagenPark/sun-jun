@@ -2,19 +2,19 @@
   <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" class="jun-nav" [containerInside]="true">
     <mdb-navbar-brand>
       <a class="logo navbar-brand" routerLink="home">
-        <strong>Fagen Park</strong>
+        <strong>{{'Sitetitle' | translate }}</strong>
       </a>
     </mdb-navbar-brand>
     <links>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item waves-light" mdbWavesEffect  routerLinkActive="active">
-          <a class="nav-link" routerLink="profile">Profile</a>
+          <a class="nav-link" routerLink="profile">{{'profile' | translate }}</a>
         </li>
         <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active">
-          <a class="nav-link" routerLink="gallery">Gallery</a>
+          <a class="nav-link" routerLink="gallery">{{'gallery' | translate }}</a>
         </li>
         <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active">
-          <a class="nav-link" routerLink="projects">Projects</a>
+          <a class="nav-link" routerLink="projects">{{'projects' | translate }}</a>
         </li>
       </ul>
       <!-- Right -->
@@ -32,12 +32,25 @@
         <li class="nav-item">
           <a href="https://github.com/FagenPark" class="nav-link border border-light rounded"
              target="_blank">
-            <i class="fab fa-github mr-2"></i>Jun GitHub
+            <i class="fab fa-github mr-2"></i>{{'github' | translate }}
           </a>
         </li>
       </ul>
+      <span class="form-inline">
+  <select
+    class="form-control lang-select"
+    #selectedLang
+    (change)="switchLang(selectedLang.value)">
+    <option *ngFor="let language of translate.getLangs()"
+            [value]="language"
+            [selected]="language === translate.currentLang">
+      {{ language }}
+    </option>
+  </select>
+</span>
     </links>
   </mdb-navbar>
+
 </header>
 <div [@routeAnimations]="prepareRoute(rootOutlet)" class="view-container">
   <router-outlet #rootOutlet="outlet"></router-outlet>
