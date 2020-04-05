@@ -77,5 +77,5 @@ export class AppModule { }
 
 // AOT compilation support
 export function httpTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, 'sun-jun');
+  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
