@@ -26,7 +26,7 @@ export class AuthService {
     createAuth0Client({
       domain: environment.AUTH0_DOMAIN,
       client_id: environment.AUTH0_CLIENT_ID,
-      redirect_uri: `${window.location.origin}`,
+      redirect_uri: `${window.location.href}`,
       response_type: 'token id_token',
       scope: 'openid profile email'
     })
