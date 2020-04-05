@@ -1,5 +1,6 @@
 <header>
-  <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" class="jun-nav" [containerInside]="true">
+  <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" class="jun-nav"
+              [containerInside]="true">
     <mdb-navbar-brand>
       <a class="logo navbar-brand" routerLink="home">
         <strong>{{'Sitetitle' | translate }}</strong>
@@ -7,7 +8,7 @@
     </mdb-navbar-brand>
     <links>
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item waves-light" mdbWavesEffect  routerLinkActive="active">
+        <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active">
           <a class="nav-link" routerLink="profile">{{'profile' | translate }}</a>
         </li>
         <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active">
@@ -48,6 +49,10 @@
     </option>
   </select>
 </span>
+      <div class="login-out">
+        <button (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
+        <button (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
+      </div>
     </links>
   </mdb-navbar>
 

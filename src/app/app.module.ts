@@ -19,6 +19,11 @@ import { PageHeaderComponent } from './page-header/page-header.component';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {environment} from '../environments/environment';
+import {EffectsModule} from '@ngrx/effects';
+import {StoreModule} from '@ngrx/store';
+import {UserModule} from './auth/user.module';
 
 @NgModule({
   declarations: [
@@ -40,6 +45,22 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     MaterialModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    UserModule,
+    StoreModule.forRoot({},
+      {
+        runtimeChecks: {
+          strictStateImmutability: true,
+          strictActionImmutability: true,
+          strictStateSerializability: true,
+          strictActionSerializability: true
+        }
+      }),
+    StoreDevtoolsModule.instrument({
+      name: 'Sun Jun Adventures DevTools',
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
+    EffectsModule.forRoot([]),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

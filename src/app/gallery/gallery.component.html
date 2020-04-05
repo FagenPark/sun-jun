@@ -1,5 +1,8 @@
 <div class="js-gallery-component">
   <app-page-header headerAnimation="slide-in-left" pageHeader="{{'gallery' | translate }}"></app-page-header>
+  <pre *ngIf="auth.userProfile$ | async as profile">
+<code>{{ profile | json }}</code>
+</pre>
   <div class="gallery-container">
     <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
                   [animation]="'slide'">

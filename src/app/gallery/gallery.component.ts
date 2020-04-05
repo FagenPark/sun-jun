@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {cards} from '../app.constants';
+import {AuthService} from '../auth/auth.service';
 
 @Component({
   selector: 'app-gallery',
@@ -10,7 +11,7 @@ export class GalleryComponent implements OnInit {
   cards = cards
   slides: any = [[]];
 
-  constructor() { }
+  constructor(public auth: AuthService) { }
   chunk(arr, chunkSize) {
     const R = [];
     for (let i = 0, len = arr.length; i < len; i += chunkSize) {
