@@ -24,6 +24,7 @@ import {environment} from '../environments/environment';
 import {EffectsModule} from '@ngrx/effects';
 import {StoreModule} from '@ngrx/store';
 import {UserModule} from './auth/user.module';
+import {CookieService} from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,7 @@ import {UserModule} from './auth/user.module';
     }),
     MDBBootstrapModule.forRoot()
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

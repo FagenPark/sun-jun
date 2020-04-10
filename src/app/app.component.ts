@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {stepper} from './animation-config';
 import {RouterOutlet} from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
@@ -6,6 +6,7 @@ import {AuthService} from './auth/auth.service';
 import {Store} from '@ngrx/store';
 
 import * as fromRoot from './state/app.state';
+import {CookieService} from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -15,17 +16,14 @@ import * as fromRoot from './state/app.state';
     stepper
   ]
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnDestroy {
   title = 'sun-jun test';
   isComponentActive = true;
   isAuthenticated = false;
   constructor(public translate: TranslateService,
-              public auth: AuthService,
-              private store: Store<fromRoot.State>) {
+              public auth: AuthService) {
     translate.addLangs(['en', 'zh']);
     translate.setDefaultLang('en');
-  }
-  ngOnInit(): void {
   }
 
   prepareRoute(outlet: RouterOutlet) {

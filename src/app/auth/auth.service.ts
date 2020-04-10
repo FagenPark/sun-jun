@@ -5,6 +5,7 @@ import { from, of, Observable, BehaviorSubject, combineLatest, throwError } from
 import { tap, catchError, concatMap, shareReplay } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment';
+import {CookieService} from 'ngx-cookie-service';
 
 
 @Injectable({
@@ -14,7 +15,8 @@ export class AuthService {
   // Create a local property for login status
   loggedIn: boolean = null;
   // Create an observable of Auth0 instance of client
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private cookieService: CookieService) {
     // On initial load, check authentication state with authorization server
     // Set up local auth streams if user is already authenticated
     this.localAuthSetup();
@@ -26,7 +28,7 @@ export class AuthService {
     createAuth0Client({
       domain: environment.AUTH0_DOMAIN,
       client_id: environment.AUTH0_CLIENT_ID,
-      redirect_uri: environment.REDIRCET_URL,
+      redirect_uri: `${window.location.origin}/`,
       response_type: 'token id_token',
       scope: 'openid profile email'
     })
@@ -78,6 +80,7 @@ export class AuthService {
   }
 
   login(redirectPath: string = '/') {
+    this.clearAppData();
     // A desired redirect path can be passed to login method
     // (e.g., from a route guard)
     // Ensure Auth0 client instance exists
@@ -88,6 +91,12 @@ export class AuthService {
         appState: { target: redirectPath }
       });
     });
+  }
+  private clearAppData(): void {
+    console.log('deleting local');
+    sessionStorage.clear();
+    localStorage.clear();
+    this.cookieService.deleteAll();
   }
 
   private handleAuthCallback() {
