@@ -24,7 +24,9 @@ import {environment} from '../environments/environment';
 import {EffectsModule} from '@ngrx/effects';
 import {StoreModule} from '@ngrx/store';
 import {UserModule} from './auth/user.module';
-import {CookieService} from 'ngx-cookie-service';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -69,9 +71,13 @@ import {CookieService} from 'ngx-cookie-service';
         deps: [HttpClient]
       }
     }),
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
   ],
-  providers: [CookieService],
+  exports: [],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,12 +1,14 @@
-import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
+import { Component, OnDestroy, OnInit} from '@angular/core';
 import {stepper} from './animation-config';
-import {RouterOutlet} from '@angular/router';
+import {Router, RouterOutlet} from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
-import {AuthService} from './auth/auth.service';
-import {Store} from '@ngrx/store';
+import {select, Store} from '@ngrx/store';
 
 import * as fromRoot from './state/app.state';
-import {CookieService} from 'ngx-cookie-service';
+import * as fromUser from './auth/state/';
+import {Observable} from 'rxjs';
+import {FirebaseAuthService} from './auth/firebase-auth.service';
+import {tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -16,14 +18,20 @@ import {CookieService} from 'ngx-cookie-service';
     stepper
   ]
 })
-export class AppComponent implements OnDestroy {
+export class AppComponent implements OnInit, OnDestroy {
+
   title = 'sun-jun test';
   isComponentActive = true;
-  isAuthenticated = false;
+  isLoggedIn$: Observable<boolean>;
   constructor(public translate: TranslateService,
-              public auth: AuthService) {
-    translate.addLangs(['en', 'zh']);
-    translate.setDefaultLang('en');
+              public auth: FirebaseAuthService,
+              private router: Router,
+              private store: Store<fromRoot.State>) {
+  }
+  ngOnInit(): void {
+    this.translate.addLangs(['en', 'zh']);
+    this.translate.setDefaultLang('en');
+    this.isLoggedIn$ = this.store.pipe(select(fromUser.getUserStatus));
   }
 
   prepareRoute(outlet: RouterOutlet) {
@@ -37,5 +45,9 @@ export class AppComponent implements OnDestroy {
 
   ngOnDestroy(): void {
     this.isComponentActive = false;
+  }
+
+  gotoLogIn() {
+    this.router.navigate(['login']);
   }
 }

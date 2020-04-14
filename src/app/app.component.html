@@ -50,8 +50,8 @@
   </select>
 </span>
       <div class="login-out">
-        <button (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
-        <button (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
+        <button (click)="gotoLogIn()" *ngIf="!(isLoggedIn$ | async)">Log In</button>
+        <button (click)="auth.signOut()" *ngIf="isLoggedIn$ | async">Log Out</button>
       </div>
     </links>
   </mdb-navbar>
