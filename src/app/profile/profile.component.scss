@@ -1,8 +1,8 @@
 .js-profile-component {
-  background: #010619 url(../../assets/images/bg-5.jpg) no-repeat center center/cover;
+  background: #010619 url(https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/bg-5.jpg?alt=media&token=c5647adc-a4a5-4315-bdbf-8dac875f98a7) no-repeat center center/cover;
   color: #fff;
   min-height: calc(100vh + 53px);
-  padding: 130px 0;
+  padding: 330px 0;
 
   .label-wrap {
     margin-top: 100px;
@@ -24,7 +24,7 @@
     height: 420px;
   }
 }
-@media screen and (min-width: 32px) {
+@media screen and (min-width: 320px) {
   .js-profile-component {
     .skill-who, .skill-chart {
       transform: scale(0.7);
@@ -34,6 +34,7 @@
 
 @media screen and (min-width: 812px) {
   .js-profile-component {
+    padding: 130px 0;
     .label-wrap {
       flex-direction: row;
       .bullet-group {
@@ -60,7 +61,6 @@
       transform: scale(1);
     }
   }
-
 }
 
 

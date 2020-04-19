@@ -1,18 +1,69 @@
 .js-login-component {
-  background: rgb(32,49,59); /* Old browsers */
-  background: -moz-linear-gradient(45deg,  rgb(32,49,59) 0%, rgb(21,59,86) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg,  rgb(32,49,59) 0%,rgb(21,59,86) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg,  rgb(32,49,59) 0%,rgb(21,59,86) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#356aa0', endColorstr='#356aa0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: #000B1C url(https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/bg-5.jpg?alt=media&token=c5647adc-a4a5-4315-bdbf-8dac875f98a7) no-repeat center center;
+  background-size: cover;
   color: #fff;
   min-height: calc(100vh + 50px);
-  padding: 130px 0;
-  .displayTable {
-    max-width: 1200px;
-    margin: 0 auto;
-
-    .btn {
+  padding: 180px 0;
+  .card {
+    position: absolute;
+    height: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.6);
+    .social_icon {
+      position: absolute;
+      right: 20px;
+      top: -45px;
+      span {
+        font-size: 60px;
+        margin-left: 10px;
+        color: #FFC312;
+        &:hover {
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+    .input-group-prepend span {
+      width: 50px;
+      background-color: #FFC312;
+      color: black;
+      border: 0;
+    }
+    input:focus {
+      outline-width: 0;
+      box-shadow: 0 0 0 0;
+    }
+    .remember input {
+      width: 20px;
+      height: 20px;
+      margin-left: 15px;
+      margin-right: 5px;
+    }
+    .login_btn{
+      color: black;
+      background-color: #FFC312;
+      width: 100px;
+      &:hover{
+        color: black;
+        background-color: white;
+      }
+    }
+    .links{
       color: white;
+    }
+    .links a{
+      margin-left: 4px;
+      color: #FFC312;
+    }
+  }
+}
+@media screen and (max-width: 450px){
+  .js-login-component {
+    padding: 330px 0;
+    .card {
+      width: 330px;
     }
   }
 }

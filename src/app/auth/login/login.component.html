@@ -1,50 +1,125 @@
 <div class="js-login-component">
-  <div class="displayTable">
-    <div class="displayTableCell">
-
-      <div class="authBlock">
+  <div class="d-flex justify-content-center h-100">
+    <div class="card" *ngIf="useIntention === 'login'" [@zoomInOutAnimation]>
+      <div class="card-header">
         <h3>Sign In</h3>
-        <div class="formGroup">
-          <input type="text" class="formControl" placeholder="Username" #userName required>
-        </div>
-
-        <div class="formGroup">
-          <input type="password" class="formControl" placeholder="Password" #userPassword required>
-        </div>
-
-        <!-- Calling SignIn Api from AuthService -->
-        <div class="formGroup">
-          <input type="button" class="btn btnPrimary" value="Log in"
-                 (click)="firebaseAuthService.signIn(userName.value, userPassword.value)">
-        </div>
-
-        <div class="formGroup">
-          <span class="or"><span class="orInner">Or</span></span>
-        </div>
-
-        <!-- Calling GoogleAuth Api from AuthService -->
-        <div class="formGroup">
-          <button type="button" class="btn googleBtn" (click)="firebaseAuthService.googleAuth()">
-            <i class="fab fa-google-plus-g"></i>
-            Log in with Google
-          </button>
-        </div>
-
-        <div class="formGroup" *ngIf="firebaseAuthService.isLoggedIn">
-          <button type="button" class="btn googleBtn" (click)="firebaseAuthService.signOut()">
-            Logout
-          </button>
-        </div>
-
-        <div class="forgotPassword">
-          <span routerLink="/forgot-password">Forgot Password?</span>
+        <div class="d-flex justify-content-end social_icon">
+<!--          <span><i class="fab fa-facebook-square"></i></span>-->
+          <span><i class="fab fa-google-plus-square" (click)="firebaseAuthService.googleAuth(returnUrl)"></i></span>
+<!--          <span><i class="fab fa-twitter-square"></i></span>-->
         </div>
       </div>
+      <div class="card-body">
+        <form  #loginForm="ngForm" (ngSubmit)="firebaseAuthService.signIn(userName.value, userPassword.value, returnUrl)">
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input type="email" class="form-control" placeholder="Username(email)" #userName required>
 
-      <div class="redirectToLogin">
-        <span>Don't have an account?<span class="redirect" routerLink="/register"> Sign Up</span></span>
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input type="password" class="form-control" placeholder="Password" #userPassword required>
+          </div>
+<!--          <div class="row align-items-center remember">-->
+<!--            <input type="checkbox">Remember Me-->
+<!--          </div>-->
+          <div class="form-group">
+            <input type="submit" value="Login" class="btn float-right login_btn">
+          </div>
+        </form>
       </div>
-
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links">
+          Don't have an account?<a (click) = "useIntention = 'register'">Sign Up</a>
+        </div>
+        <div class="d-flex justify-content-center links">
+          <a (click) = "useIntention = 'reset-password'">Forgot your password?</a>
+        </div>
+      </div>
+    </div>
+    <div class="card" *ngIf="useIntention === 'register'" [@zoomInOutAnimation]>
+      <div class="card-header">
+        <h3>Sign Up</h3>
+        <div class="d-flex justify-content-end social_icon">
+          <span><i class="fab fa-google-plus-square" (click)="firebaseAuthService.googleAuth(returnUrl)"></i></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <form  #signUpForm="ngForm" (ngSubmit)="userSignup(userEmail.value, userPassword.value)">
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input type="email" class="form-control" placeholder="Email" #userEmail required>
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input type="password" class="form-control" placeholder="Password" #userPassword required>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Signup" class="btn float-right login_btn">
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links">
+          Already have an account? <a (click)="useIntention = 'login'">Log In</a>
+        </div>
+        <div class="d-flex justify-content-center links">
+          <a (click)="useIntention = 'reset-password'">Forgot your password?</a>
+        </div>
+      </div>
+    </div>
+    <div class="card" *ngIf="useIntention === 'reset-password'" [@zoomInOutAnimation]>
+      <div class="card-header">
+        <h3>Reset Password</h3>
+        <p class="text-left">Please enter your email address to request a password reset.</p>
+      </div>
+      <div class="card-body">
+        <form  #resetPasswordForm="ngForm" (ngSubmit)="firebaseAuthService.forgotPassword(passwordResetEmail.value)">
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input type="email" class="form-control" placeholder="Email" #passwordResetEmail required>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Reset" class="btn float-right login_btn">
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links">
+          Go back to <a (click)="useIntention = 'login'">Log In</a>
+        </div>
+      </div>
+    </div>
+    <div class="card" *ngIf="useIntention === 'verify-email'" [@zoomInOutAnimation]>
+      <div class="card-header">
+        <h3>Thank You for Registering</h3>
+        <div class="formGroup" *ngIf="firebaseAuthService.userData as user">
+          <p class="text-left">We have sent a confirmation email to <strong>{{user.email}}</strong>.</p>
+          <p class="text-left">Please check your email and click on the link to verify your email address.</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <form  #verifyForm="ngForm" (ngSubmit)="firebaseAuthService.sendVerificationMail()">
+          <div class="form-group">
+            <input type="submit" value="Resend" class="btn float-right login_btn">
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links">
+          Go back to <a (click)="useIntention = 'login'">Log In</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

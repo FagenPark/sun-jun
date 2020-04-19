@@ -1,4 +1,4 @@
-import {Injectable, NgZone, OnInit} from '@angular/core';
+import {Injectable, NgZone} from '@angular/core';
 import {Router} from '@angular/router';
 import {auth} from 'firebase/app';
 import {AngularFireAuth} from '@angular/fire/auth';
@@ -7,7 +7,6 @@ import {AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firestor
 import {Store} from '@ngrx/store';
 import * as fromRoot from '../state/app.state';
 import * as userActions from './state/user.actions';
-import {Observable, of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -48,13 +47,13 @@ export class FirebaseAuthService {
   }
 
 // Sign in with email/password
-  signIn(email, password) {
+  signIn(email, password, returnUrl) {
     return this.afAuth.signInWithEmailAndPassword(email, password)
       .then((result) => {
-        this.ngZone.run(() => {
-          this.router.navigate(['home']);
-        });
         this.setUserData(result.user);
+        this.ngZone.run(() => {
+          setTimeout(() => {this.router.navigate([returnUrl]); }, 0);
+        });
       }).catch((error) => {
         window.alert(error.message);
       });
@@ -62,11 +61,7 @@ export class FirebaseAuthService {
   // Send email verfificaiton when new user sign up
   async sendVerificationMail() {
     await (await this.afAuth.currentUser).sendEmailVerification();
-    await this.router.navigate(['verify-email']);
-    // return this.afAuth.currentUser.sendEmailVerification()
-    //   .then(() => {
-    //     this.router.navigate(['verify-email-address']);
-    //   });
+    await this.router.navigate(['login']);
   }
 
   // Reset Forggot password
@@ -80,18 +75,18 @@ export class FirebaseAuthService {
   }
 
   // Sign in with Google
-  googleAuth() {
-    return this.authLogin(new auth.GoogleAuthProvider());
+  googleAuth(returnUrl) {
+    return this.authLogin(new auth.GoogleAuthProvider(), returnUrl);
   }
 
   // Auth logic to run auth providers
-  authLogin(provider) {
+  authLogin(provider, returnUrl) {
     return this.afAuth.signInWithPopup(provider)
       .then((result) => {
-        this.ngZone.run(() => {
-          this.router.navigate(['home']);
-        });
         this.setUserData(result.user);
+        this.ngZone.run(() => {
+          setTimeout(() => {this.router.navigate([returnUrl]); }, 0);
+        });
       }).catch((error) => {
         window.alert(error);
       });
@@ -134,15 +129,8 @@ export class FirebaseAuthService {
     });
   }
 
-  signUp(email: string, password: string) {
-    this.afAuth
-      .createUserWithEmailAndPassword(email, password)
-      .then(value => {
-        this.router.navigate(['verify-email']);
-      })
-      .catch(err => {
-        alert(err.message);
-      });
+  signUp(email: string, password: string): Promise<any> {
+    return  this.afAuth.createUserWithEmailAndPassword(email, password);
   }
 
   // Returns true when user is looged in and email is verified
