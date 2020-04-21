@@ -6,6 +6,7 @@ import {select, Store} from '@ngrx/store';
 import * as fromRoot from '../state/app.state';
 import {Observable} from 'rxjs';
 import * as fromUser from '../auth/state';
+import {User} from '../auth/user';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +16,7 @@ import * as fromUser from '../auth/state';
 export class HeaderComponent implements OnInit, OnDestroy {
   isComponentActive = true;
   isLoggedIn$: Observable<boolean>;
+  user$: Observable<User>;
   constructor(public translate: TranslateService,
               public auth: FirebaseAuthService,
               private router: Router,
@@ -24,6 +26,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.translate.addLangs(['en', 'zh']);
     this.translate.setDefaultLang('en');
     this.isLoggedIn$ = this.store.pipe(select(fromUser.getUserStatus));
+    this.user$ = this.store.pipe(select(fromUser.getCurrentUser));
   }
   switchLang(lang: string) {
     this.translate.use(lang);

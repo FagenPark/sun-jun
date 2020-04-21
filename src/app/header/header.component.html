@@ -3,7 +3,7 @@
               [containerInside]="true">
     <mdb-navbar-brand>
       <a class="logo navbar-brand" routerLink="home">
-        <strong>{{'Sitetitle' | translate }}</strong>
+        <img src="./assets/svg/logo.svg" alt="" width="40" height="40">
       </a>
     </mdb-navbar-brand>
     <links>
@@ -20,6 +20,7 @@
       </ul>
       <!-- Right -->
       <ul class="navbar-nav nav-flex-icons">
+        <li *ngIf="user$ | async as user"><img class="user-photo" [src]="user.photoURL" alt=""></li>
       </ul>
       <span class="form-inline">
   <select
