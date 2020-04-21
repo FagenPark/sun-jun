@@ -27,6 +27,7 @@ import {UserModule} from './auth/user.module';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
     WhoAmIComponent,
     SkillChartComponent,
     ProjectComponent,
-    PageHeaderComponent
+    PageHeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,8 @@
   color: white;
   height: 42px;
   margin-left: 5px;
+  border: none;
+  width: auto;
   option {
     background: #000C24;
   }
@@ -13,6 +15,9 @@
     color: white;
     height: 42px;
     margin-left: 5px;
-    border-radius: 4px;
+    border: none;
   }
+}
+.view-container {
+  min-height: 100.5vh;
 }

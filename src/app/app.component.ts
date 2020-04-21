@@ -8,7 +8,6 @@ import * as fromRoot from './state/app.state';
 import * as fromUser from './auth/state/';
 import {Observable} from 'rxjs';
 import {FirebaseAuthService} from './auth/firebase-auth.service';
-import {tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
