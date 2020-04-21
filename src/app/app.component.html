@@ -1,45 +1,4 @@
-<header>
-  <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" class="jun-nav"
-              [containerInside]="true">
-    <mdb-navbar-brand>
-      <a class="logo navbar-brand" routerLink="home">
-        <strong>{{'Sitetitle' | translate }}</strong>
-      </a>
-    </mdb-navbar-brand>
-    <links>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active">
-          <a class="nav-link" routerLink="profile">{{'profile' | translate }}</a>
-        </li>
-        <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active">
-          <a class="nav-link" routerLink="gallery">{{'gallery' | translate }}</a>
-        </li>
-        <li class="nav-item waves-light" mdbWavesEffect routerLinkActive="active">
-          <a class="nav-link" routerLink="projects">{{'projects' | translate }}</a>
-        </li>
-      </ul>
-      <!-- Right -->
-      <ul class="navbar-nav nav-flex-icons">
-      </ul>
-      <span class="form-inline">
-  <select
-    class="form-control lang-select"
-    #selectedLang
-    (change)="switchLang(selectedLang.value)">
-    <option *ngFor="let language of translate.getLangs()"
-            [value]="language"
-            [selected]="language === translate.currentLang">
-      {{ language }}
-    </option>
-  </select>
-</span>
-      <div class="login-out">
-        <button (click)="gotoLogIn()" *ngIf="!(isLoggedIn$ | async)">Log In</button>
-        <button (click)="auth.signOut()" *ngIf="isLoggedIn$ | async">Log Out</button>
-      </div>
-    </links>
-  </mdb-navbar>
-</header>
+<app-header></app-header>
 <div [@routeAnimations]="prepareRoute(rootOutlet)" class="view-container">
   <router-outlet #rootOutlet="outlet"></router-outlet>
 </div>
