@@ -8,7 +8,7 @@
     color: #009ED9;
   };
   .jun {
-    height: 200px;
+    height: 255px;
     margin-top: 1rem;
     background-color: rgba(105, 0, 132, .8);
   }
@@ -19,6 +19,17 @@
   }
   .about-jun {
     padding-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+}
+@media screen and(min-width: 820px) {
+  .who-i-am-component {
+    .jun {
+      height: 200px;
+    }
+    .about-jun {
+      font-size: 1rem;
+    }
   }
 }
 
