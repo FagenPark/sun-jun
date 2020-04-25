@@ -189,6 +189,18 @@ export const junProjects = [
     pUrl: 'https://www.choice.com.au/solar-estimator'
   },
   {
+    pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/img-recognizer.png?alt=media&token=8eb6aeca-eba5-4985-8a7d-9bcf31950281',
+    pTitle: 'Energy tag reader',
+    pSubTitle: 'AI/Image reading',
+    pUrl: 'https://choice-vision-ai.firebaseapp.com/'
+  },
+  {
+    pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/chatbot.png?alt=media&token=1a5dee0b-cdb7-4a1f-9936-71e71432c06d',
+    pTitle: 'Chat bot',
+    pSubTitle: 'AI',
+    pUrl: 'https://moving-house-2e195.firebaseapp.com/'
+  },
+  {
     pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/angularjs.png?alt=media&token=1181795a-5813-4c9f-8d8d-babe28cff19f',
     pTitle: 'Tab Boxes',
     pSubTitle: 'AngularJS',
@@ -213,21 +225,9 @@ export const junProjects = [
     pUrl: 'https://maestro.avoka.com.au/web-plugin/servlet/SmartForm.html?formCode=carousels'
   },
   {
-    pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/mysite.png?alt=media&token=12bed3fd-e65c-41df-b615-95b4bbf578f6',
+    pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/accessibility.jpg?alt=media&token=31fea278-c58b-49e1-b16c-5f5f8f755132',
     pTitle: 'Floating Label Inputs',
     pSubTitle: 'JavaScript',
     pUrl: 'https://maestro.avoka.com.au/web-plugin/servlet/SmartForm.html?formCode=floatinglabelinputs'
-  },
-  {
-    pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/star-rating.jpg?alt=media&token=6035c6df-a612-4254-831c-f06f54925c8e',
-    pTitle: 'Rating Component',
-    pSubTitle: 'CSS HTML',
-    pUrl: 'https://maestro.avoka.com.au/web-plugin/servlet/SmartForm.html?formCode=ratinginput'
-  },
-  {
-    pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/accessibility.jpg?alt=media&token=31fea278-c58b-49e1-b16c-5f5f8f755132',
-    pTitle: 'Word Counter',
-    pSubTitle: 'Accessibility',
-    pUrl: 'https://maestro.avoka.com.au/web-plugin/servlet/SmartForm.html?formCode=wordcounttextarea'
   }
 ];

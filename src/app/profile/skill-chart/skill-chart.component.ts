@@ -1,31 +1,54 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 // @ts-ignore
 import Chart = require('chart.js');
+import {TranslateService} from '@ngx-translate/core';
+import {map, take, takeWhile} from 'rxjs/operators';
 
 @Component({
   selector: 'app-skill-chart',
   templateUrl: './skill-chart.component.html',
   styleUrls: ['./skill-chart.component.scss']
 })
-export class SkillChartComponent implements OnInit {
-
-  constructor() {
+export class SkillChartComponent implements OnInit, OnDestroy {
+private isComponentActive = true;
+  constructor(public translate: TranslateService) {
   }
 
   ngOnInit() {
-    this.drawRadar();
+    this.iniChart();
+    this.updateChartOnLangChange();
   }
 
-  private drawRadar() {
-    // radar
+  private updateChartOnLangChange() {
+    this.translate.onLangChange.pipe(
+      takeWhile(() => this.isComponentActive),
+      map(e => e.translations)
+    ).subscribe(
+      this.handleLang()
+    );
+  }
+
+  private iniChart() {
+    this.translate.getTranslation(this.translate.getDefaultLang()).pipe(
+      take(1)
+    ).subscribe(
+      this.handleLang()
+    );
+  }
+
+  private handleLang() {
+    return translations => this.drawRadar(translations.chartLabel, translations.chartLabels);
+  }
+
+  private drawRadar(lbl, lbls) {
     // @ts-ignore
     const ctxR = document.getElementById('skillChart').getContext('2d');
     const myRadarChart = new Chart(ctxR, {
       type: 'radar',
       data: {
-        labels: ['JavaScript/TypeScript', 'HTML', 'Angular', 'React', 'CSS', 'Node.js', '.Net'],
+        labels: lbls,
         datasets: [{
-          label: 'Skill Metrics',
+          label: lbl,
           data: [90, 80, 85, 70, 85, 70, 70],
           backgroundColor: [
             'rgba(105, 0, 132, .2)',
@@ -65,5 +88,9 @@ export class SkillChartComponent implements OnInit {
         responsive: true,
       }
     });
+  }
+
+  ngOnDestroy(): void {
+    this.isComponentActive = false;
   }
 }
