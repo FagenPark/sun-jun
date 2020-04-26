@@ -23,9 +23,6 @@
   "p-b4-title": "Dynamic",
   "p-b4-description": "\n                    Elements and data are mean to be living stuff.\n                  ",
   "chartLabel": "Skill Metrics",
-  "chartLabels": [
-    "JavaScript/TypeScript", "HTML", "Angular", "React", "CSS", "Node.js", ".Net"
-  ],
   "who-is": "Who's this guy?",
   "about-jun": "A web developer in Sydney,\n    I have strong passion for UI effects, animations and creating\n    pleasant, dynamic user experiences.\n    Click ",
   "here": "here",

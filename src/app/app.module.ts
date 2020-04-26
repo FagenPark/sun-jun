@@ -29,6 +29,7 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { ImgFallbackDirective } from './img-fallback.directive';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { HeaderComponent } from './header/header.component';
     ProjectComponent,
     PageHeaderComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ImgFallbackDirective
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,11 @@
     </div>
   </div>
   <div class="skills-wrapper flex">
-    <app-who-am-i class="skill-who"></app-who-am-i>
-    <app-skill-chart class="skill-chart"></app-skill-chart>
+    <app-who-am-i class="skill-who"
+                  whoIs="{{'who-is' | translate}}"
+                  aboutJun="{{'about-jun' | translate}}"
+                  cvLink="{{'here' | translate}}"
+    knowMore="{{'know-more' | translate}}"></app-who-am-i>
+    <app-skill-chart class="skill-chart" chartLabel="{{'chartLabel' | translate}}"></app-skill-chart>
   </div>
 </div>

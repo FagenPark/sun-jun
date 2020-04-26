@@ -12,7 +12,7 @@ export class ProjectComponent implements OnInit {
   @Input() projectTitle: string;
   @Input() projectSubTitle: string;
   @Input() projectUrl: string;
-  userHovering = false;
+  userFocusing = false;
 
   constructor() { }
 

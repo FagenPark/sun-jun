@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-who-am-i',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./who-am-i.component.scss']
 })
 export class WhoAmIComponent implements OnInit {
+  @Input() whoIs: string;
+  @Input() aboutJun: string;
+  @Input() cvLink: string;
+  @Input() knowMore: string;
 
   constructor() { }
 

@@ -1,7 +1,7 @@
-<div class="js-project-component" (mouseenter)="userHovering = true" (mouseleave)="userHovering = false">
-    <div class="project-card" *ngIf="!userHovering"
+<div class="js-project-component" tabindex="0" (focus)="userFocusing = true" (blur)="userFocusing = false">
+    <div class="project-card" *ngIf="!userFocusing"
          [ngStyle]="{'background' : 'url(' + cardUrl + ') center / contain no-repeat'}" [@zoomFadeInOutAnimation]></div>
-    <div class="project-card-content flex flex-column" *ngIf="userHovering" [@zoomFadeInOutAnimation]>
+    <div class="project-card-content flex flex-column" *ngIf="userFocusing" [@zoomFadeInOutAnimation]>
       <div class="project-text">
         <div class="project-title">{{projectTitle}}</div>
         <span class="project-sub">{{projectSubTitle}}</span>

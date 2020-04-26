@@ -1,4 +1,6 @@
 const assetsPath = './assets/images/';
+export const skillChartLabels = ['JavaScript/TypeScript', 'HTML', 'Angular', 'React', 'CSS', 'Node.js', '.Net'];
+export const skillsData = [90, 80, 85, 70, 85, 70, 70];
 export const cards = [
   {
     title: 'Alex',

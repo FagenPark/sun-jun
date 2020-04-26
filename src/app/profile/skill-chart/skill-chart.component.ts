@@ -1,55 +1,31 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
 // @ts-ignore
 import Chart = require('chart.js');
-import {TranslateService} from '@ngx-translate/core';
-import {map, take, takeWhile} from 'rxjs/operators';
+import {skillChartLabels, skillsData} from '../../app.constants';
 
 @Component({
   selector: 'app-skill-chart',
   templateUrl: './skill-chart.component.html',
   styleUrls: ['./skill-chart.component.scss']
 })
-export class SkillChartComponent implements OnInit, OnDestroy {
-private isComponentActive = true;
-  constructor(public translate: TranslateService) {
+export class SkillChartComponent implements  OnChanges {
+  @Input() chartLabel: string;
+  axisLabels = skillChartLabels;
+  skillsData = skillsData;
+  constructor() {
   }
 
-  ngOnInit() {
-    this.iniChart();
-    this.updateChartOnLangChange();
-  }
-
-  private updateChartOnLangChange() {
-    this.translate.onLangChange.pipe(
-      takeWhile(() => this.isComponentActive),
-      map(e => e.translations)
-    ).subscribe(
-      this.handleLang()
-    );
-  }
-
-  private iniChart() {
-    this.translate.getTranslation(this.translate.getDefaultLang()).pipe(
-      take(1)
-    ).subscribe(
-      this.handleLang()
-    );
-  }
-
-  private handleLang() {
-    return translations => this.drawRadar(translations.chartLabel, translations.chartLabels);
-  }
-
-  private drawRadar(lbl, lbls) {
+  private drawRadar(lbl) {
+    if (!lbl) { return; }
     // @ts-ignore
     const ctxR = document.getElementById('skillChart').getContext('2d');
     const myRadarChart = new Chart(ctxR, {
       type: 'radar',
       data: {
-        labels: lbls,
+        labels: this.axisLabels,
         datasets: [{
           label: lbl,
-          data: [90, 80, 85, 70, 85, 70, 70],
+          data: this.skillsData,
           backgroundColor: [
             'rgba(105, 0, 132, .2)',
           ],
@@ -89,8 +65,7 @@ private isComponentActive = true;
       }
     });
   }
-
-  ngOnDestroy(): void {
-    this.isComponentActive = false;
+  ngOnChanges(changes: SimpleChanges): void {
+    this.drawRadar(this.chartLabel);
   }
 }
