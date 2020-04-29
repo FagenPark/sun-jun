@@ -1,13 +1,13 @@
 import {Injectable, NgZone} from '@angular/core';
 import {Router} from '@angular/router';
-import {auth} from 'firebase/app';
+import 'firebase/auth';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {User} from './user';
 import {AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firestore';
 import {Store} from '@ngrx/store';
 import * as fromRoot from '../state/app.state';
 import * as userActions from './state/user.actions';
-import * as firebase from 'firebase';
+import * as firebase from 'firebase/app';
 
 @Injectable({
   providedIn: 'root'
@@ -78,7 +78,7 @@ export class FirebaseAuthService {
     alert('Please check your email');
   }
   googleAuth(returnUrl) {
-    return this.authLogin(new auth.GoogleAuthProvider(), returnUrl);
+    return this.authLogin(new firebase.auth.GoogleAuthProvider(), returnUrl);
   }
   authLogin(provider, returnUrl) {
     return this.afAuth.signInWithPopup(provider)
