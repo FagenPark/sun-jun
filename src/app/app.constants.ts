@@ -176,11 +176,6 @@ export const cards = [
     title: 'Me',
     description: '1/27/2018 Sydney',
     img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20180127_063940.jpg?alt=media&token=fec8e755-1073-4c46-818c-7e6a4dd67b97'
-  },
-  {
-    title: 'Dennis & Alex',
-    description: '2017/04/20',
-    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20170420_173941.jpg?alt=media&token=98558847-6991-418a-815e-3c8dfa808289'
   }
 ];
 export const junProjects = [
