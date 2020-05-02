@@ -1,16 +1,16 @@
 footer {
-  background: linear-gradient(245deg, #020B1B, rgb(32, 49, 59), #1B4556);
+  background: linear-gradient(245deg, var(--navbar-bg-color), var(--teritery-color), var(--body-bg-color));
   background-size: 600% 600%;
   -webkit-animation: Gradient 6s ease infinite;
   -moz-animation: Gradient 6s ease infinite;
   animation: Gradient 6s ease infinite;
   padding: 5% 5% 55px;
   position: relative;
-  color: white;
+  color: var(--primary-font-color);
   display: flex;
   flex-direction: column;
   a {
-    color: #FFC312;
+    color: var(--anchor-font-color);
     &:hover {
       opacity: 0.7;
     }
@@ -34,9 +34,6 @@ footer {
     justify-content: space-around;
     .contact-item {
       text-align: right;
-    }
-    .js-footer-item {
-
     }
   }
 }

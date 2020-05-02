@@ -1,5 +1,5 @@
 .view {
-  background: #000B1C url(https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/moon.jpg?alt=media&token=057b734b-1990-49b2-8ab3-5e77496ad89f) no-repeat center center;
+  background: var(--navbar-bg-color) var(--ld-bg-img) no-repeat center center;
   background-size: cover;
   min-height: 100vh;
   .text {
@@ -7,7 +7,7 @@
     line-height: 250px;
     text-align: right;
     .highlight {
-      color: #e25663;
+      color: var(--primary-color);
     }
     p {
       font-size: 20px;
@@ -23,7 +23,7 @@
       font-size: 45px;
       line-height: 350px;
       .highlight {
-        color: #e25663;
+        color: var(--primary-color);
       }
       p {
         font-size: 28px;
@@ -39,7 +39,7 @@
     margin-top: 170px;
   }
   .view {
-    background: #020918 url(https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/moon-phone.jpg?alt=media&token=b7a14b6b-5c1e-46b9-82ed-5dfa4711b36e) no-repeat center center;
+    background: var(--navbar-bg-color) var(--ld-bg-img-mobile) no-repeat center center;
     background-size: cover;
     .text {
       line-height: 80px;

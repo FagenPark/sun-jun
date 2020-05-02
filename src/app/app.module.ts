@@ -29,6 +29,7 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import {metaReducers, reducers} from './reducers';
 
 @NgModule({
   declarations: [
@@ -53,8 +54,9 @@ import { HeaderComponent } from './header/header.component';
     HttpClientModule,
     BrowserAnimationsModule,
     UserModule,
-    StoreModule.forRoot({},
+    StoreModule.forRoot(reducers,
       {
+        metaReducers,
         runtimeChecks: {
           strictStateImmutability: true,
           strictActionImmutability: true,
