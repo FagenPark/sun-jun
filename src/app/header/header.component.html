@@ -33,6 +33,16 @@
       {{ language }}
     </option>
   </select>
+        <select
+          class="form-control lang-select"
+          #selectedTheme
+          (change)="changeTheme(selectedTheme.value)">
+    <option *ngFor="let theme of themeOptions"
+            [value]="theme.value"
+            [selected]="theme === translate.currentLang">
+      {{ theme.label }}
+    </option>
+  </select>
 </span>
       <div class="login-out">
         <button (click)="gotoLogIn()" *ngIf="!(isLoggedIn$ | async)">{{'login' | translate}}</button>

@@ -4,7 +4,7 @@ html, body { height: 101%; }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background: #153B56;
+  background: var(--body-bg-color);
   .flex.row {
     flex-direction: row;
   }
@@ -17,7 +17,7 @@ body {
     margin: 0;
   }
   #navbarCollapse {
-    background-color: #000B1C;
+    background-color: var(--navbar-bg-color);
   }
   }
 
@@ -27,7 +27,7 @@ mdb-carousel {
       margin-bottom: 1.88rem;
       text-align: center;
       .btn-floating {
-        background: #e25663;
+        background: var(--primary-color);
         position: relative;
         z-index: 1;
         display: inline-block;
@@ -52,10 +52,9 @@ mdb-carousel {
       margin-bottom: -5em;
       li {
         width: 1.25rem;
-        //max-width: 1.25rem;
         height: 1.25rem;
         margin-bottom: -3.75rem;
-        background-color: #FF3547;
+        background-color: var(--secondary-color);
       }
     }
   }
@@ -73,5 +72,13 @@ mdb-carousel {
     max-height: 100%;
     max-width: 50%;
   }
+}
+
+:root {
+  --primary-color: #e25663;
+  --secondary-color: #FF3547;
+  --body-bg-color: #153B56;
+  --navbar-bg-color: #000B1C;
+  --primary-font-color: #fff;
 }
 

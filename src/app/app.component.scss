@@ -1,18 +1,18 @@
 .lang-select {
   background: transparent;
-  color: white;
+  color: var(--primary-font-color);
   height: 42px;
   margin-left: 5px;
   border: none;
   width: auto;
   option {
-    background: #000C24;
+    background: var(--navbar-bg-color);
   }
 }
 .login-out {
   button {
     background: transparent;
-    color: white;
+    color: var(--primary-font-color);
     height: 42px;
     margin-left: 5px;
     border: none;
