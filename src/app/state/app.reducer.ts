@@ -5,7 +5,7 @@ export interface AppState {
   currentTheme: string;
 }
 const initialState: AppState = {
-  currentTheme: 'false,'
+  currentTheme: 'dark'
 };
 
 export function reducer(state = initialState, action: AppActions): AppState {

@@ -32,12 +32,12 @@
   text-align: center;
   width: 80px;
   .hexagon {
-    background-color: #3227e2a1;
+    background-color: var(--hexgon-color);
     display: inline-block;
     height: 100%;
     width: calc(100% * 0.57735);
     i {
-      color: #fff;
+      color: var(--primary-font-color);
       font-size: 34pt;
       left: 0;
       position: absolute;

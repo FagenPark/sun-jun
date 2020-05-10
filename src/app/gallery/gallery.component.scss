@@ -1,7 +1,7 @@
 .js-gallery-component {
-  background: rgb(32, 49, 59) url(https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/bg-4.jpg?alt=media&token=08f54c86-747a-4d06-894f-7f844b57347b) no-repeat center center;
+  background: var(--gallery-bg-img) no-repeat center center;
   background-size: cover;
-  color: #fff;
+  color: var(--primary-font-color);
   min-height: calc(100vh + 50px);
   padding: 130px 0;
 
@@ -11,8 +11,8 @@
   }
 
   .carousel-text {
-    color: #333;
-    background: #ffb95f;
+    color: var(--primary-font-color);
+    background: var(--anchor-font-color);
   }
 
   .waves-light {

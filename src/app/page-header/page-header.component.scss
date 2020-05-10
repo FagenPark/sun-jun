@@ -1,11 +1,11 @@
 .header {
   font-size: 48px;
   text-align: center;
-  color: #fff;
+  color: var(--primary-font-color);
 }
 .header-bar {
   margin: 0 auto;
-  background: rgba(228, 248, 248, 0.79);
+  background: var(--primary-font-color);
   height: 4px;
   width: 120px;
 }

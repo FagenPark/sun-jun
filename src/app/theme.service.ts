@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {themeOptions} from './app.constants';
 import {StyleManagerService} from './style-manager.service';
-import {DomSanitizer} from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +8,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 export class ThemeService {
   themeOptions = themeOptions;
 
-  constructor(private styleManager: StyleManagerService,public sanitizer: DomSanitizer) { }
+  constructor(private styleManager: StyleManagerService) { }
   setTheme(themeToSet) {
     this.styleManager.setStyle(
       'theme',

@@ -1,6 +1,6 @@
 .js-project-component {
   padding: 2px;
-  background-color: #fff;
+  background-color: var(--body-bg-color);
   width: 196px;
   height: 196px;
   .project-card {
@@ -21,15 +21,15 @@
       font-weight: bold;
     }
     .project-sub {
-      color: rgb(105, 0, 132);
+      color: var(--primary-font-color);
     }
   }
 
   .btn-link {
-    border: 2px solid #d91682;
+    border: 2px solid var(--primary-color);
     &:hover {
-      background: #d91682;
-      color: #fff;
+      background: var(--primary-color);
+      color: var(--primary-font-color);
     }
   }
 }

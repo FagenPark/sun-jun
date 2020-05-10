@@ -61,6 +61,11 @@ mdb-carousel {
 }
 
 @media screen and (min-width: 960px) {
+  body {
+    #navbarCollapse {
+      background-color: transparent;
+    }
+  }
   .animated.slide-in-left {
     animation: slideInLeft 0.75s ease both;
   }
@@ -73,16 +78,3 @@ mdb-carousel {
     max-width: 50%;
   }
 }
-
-:root {
-  --primary-color: #e25663;
-  --secondary-color: #FF3547;
-  --teritery-color: rgb(32, 49, 59);
-  --body-bg-color: #153B56;
-  --navbar-bg-color: #000B1C;
-  --primary-font-color: #fff;
-  --anchor-font-color: #FFC312;
-  --ld-bg-img: url(https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/moon.jpg?alt=media&token=057b734b-1990-49b2-8ab3-5e77496ad89f);
-  --ld-bg-img-mobile: url(https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/moon-phone.jpg?alt=media&token=b7a14b6b-5c1e-46b9-82ed-5dfa4711b36e);
-}
-

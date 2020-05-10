@@ -10,7 +10,7 @@
       <app-bullet bulletIcon="fas fa-dice" bulletLabel="{{'p-b4-title' | translate }}" bulletDescription="{{'p-b4-description' | translate }}"></app-bullet>
     </div>
   </div>
-  <div class="skills-wrapper flex">
+  <div class="skills-wrapper flex" [ngStyle]="{'background': (currentTheme$ | async) === 'light' ? 'none' : ''}">
     <app-who-am-i class="skill-who"
                   whoIs="{{'who-is' | translate}}"
                   aboutJun="{{'about-jun' | translate}}"

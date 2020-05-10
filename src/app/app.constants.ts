@@ -230,31 +230,19 @@ export const junProjects = [
 ];
 export const themeOptions = [
   {
-    backgroundColor: '#fff',
-    buttonColor: '#ffc107',
-    headingColor: '#673ab7',
-    label: 'Deep Purple & Amber',
-    value: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/css%2Fdeeppurple-amber.css?alt=media&token=10c6beb8-e57c-4244-a477-3a3913af2436'
-  },
-  {
-    backgroundColor: '#fff',
-    buttonColor: '#ff4081',
-    headingColor: '#3f51b5',
-    label: 'Indigo & Pink',
-    value: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/css%2Findigo-pink.css?alt=media&token=a516febe-3260-49b1-90b1-a89bd862d145'
-  },
-  {
     backgroundColor: '#303030',
     buttonColor: '#607d8b',
     headingColor: '#e91e63',
-    label: 'Pink & Blue Grey',
-    value: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/css%2Fpink-bluegrey.css?alt=media&token=ed3b0d16-fa92-41c8-b031-c40c841ac56b'
+    label: 'Dark Theme',
+    theme: 'dark',
+    value: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/css%2Fdark-theme.css?alt=media&token=acf442e1-6fe0-489b-8111-d232dfd17b1b'
   },
   {
-    backgroundColor: '#303030',
-    buttonColor: '#4caf50',
-    headingColor: '#9c27b0',
-    label: 'Purple & Green',
-    value: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/css%2Fpurple-green.css?alt=media&token=2994b43c-96b7-4f1f-8f3a-678d63f4e7ce'
+    backgroundColor: '#fff',
+    buttonColor: '#ffc107',
+    headingColor: '#673ab7',
+    label: 'Light Theme',
+    theme: 'light',
+    value: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/css%2Flight-theme.css?alt=media&token=f4f38f9a-8884-4e07-b923-c38c817d3ef7'
   }
 ];

@@ -1,6 +1,6 @@
 .js-profile-component {
-  background: #010619 url(https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/bg-5.jpg?alt=media&token=c5647adc-a4a5-4315-bdbf-8dac875f98a7) no-repeat center center/cover;
-  color: #fff;
+  background: var(--profile-bg-img) no-repeat center center/cover;
+  color: var(--primary-font-color);
   min-height: calc(100vh + 53px);
   padding: 330px 0;
 
@@ -16,7 +16,7 @@
     margin: 50px 0 0 0;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(255,255,255,1);
+    background-color: var(--primary-font-color);
   }
   .skill-chart, .skill-who {
     transform: scale(0.8);

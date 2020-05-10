@@ -1,7 +1,7 @@
 .js-login-component {
-  background: #000B1C url(https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/bg-5.jpg?alt=media&token=c5647adc-a4a5-4315-bdbf-8dac875f98a7) no-repeat center center;
+  background: var(--lgin-bg-img) no-repeat center center;
   background-size: cover;
-  color: #fff;
+  color: var(--primary-font-color);
   min-height: calc(100vh + 50px);
   padding: 180px 0;
   .card {
@@ -10,7 +10,7 @@
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: var(--card-bg);
     .social_icon {
       position: absolute;
       right: 20px;
@@ -18,17 +18,17 @@
       span {
         font-size: 60px;
         margin-left: 10px;
-        color: #FFC312;
+        color: var(--anchor-font-color);
         &:hover {
-          color: white;
+          color: var(--primary-font-color);
           cursor: pointer;
         }
       }
     }
     .input-group-prepend span {
       width: 50px;
-      background-color: #FFC312;
-      color: black;
+      background-color: var(--anchor-font-color);
+      color: var(--secondary-font-color);
       border: 0;
     }
     input:focus {
@@ -42,20 +42,19 @@
       margin-right: 5px;
     }
     .login_btn{
-      color: black;
-      background-color: #FFC312;
+      color: var(--secondary-font-color);
+      background-color: var(--anchor-font-color);
       width: 100px;
       &:hover{
-        color: black;
-        background-color: white;
+        background-color: var(--primary-font-color);
       }
     }
     .links{
-      color: white;
+      color: var(--primary-font-color);
     }
     .links a{
       margin-left: 4px;
-      color: #FFC312;
+      color: var(--anchor-font-color);
     }
   }
 }

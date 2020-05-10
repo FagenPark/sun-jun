@@ -1,5 +1,5 @@
 <header>
-  <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav" class="jun-nav"
+  <mdb-navbar [SideClass]="'navbar fixed-top navbar-expand-lg scrolling-navbar intro-fixed-nav navbar-' + (currentTheme$ | async)"
               [containerInside]="true">
     <mdb-navbar-brand>
       <a class="logo navbar-brand" routerLink="home">
@@ -38,8 +38,8 @@
           #selectedTheme
           (change)="changeTheme(selectedTheme.value)">
     <option *ngFor="let theme of themeOptions"
-            [value]="theme.value"
-            [selected]="theme === translate.currentLang">
+            [value]="theme.theme"
+            [selected]="theme.theme === (currentTheme$ | async)">
       {{ theme.label }}
     </option>
   </select>

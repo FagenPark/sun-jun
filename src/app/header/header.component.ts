@@ -6,8 +6,11 @@ import {select, Store} from '@ngrx/store';
 import * as fromRoot from '../state/app.state';
 import {Observable} from 'rxjs';
 import * as fromUser from '../auth/state';
+import * as fromApp from '../state';
+import * as appActions from '../state/app.actions';
 import {User} from '../auth/user';
 import {ThemeService} from '../theme.service';
+import {tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +22,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   isLoggedIn$: Observable<boolean>;
   user$: Observable<User>;
   themeOptions = this.themeService.themeOptions;
-  currentTheme = this.themeOptions[0];
+  currentTheme$: Observable<string>;
   constructor(public translate: TranslateService,
               public auth: FirebaseAuthService,
               private router: Router,
@@ -31,7 +34,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.translate.setDefaultLang('en');
     this.isLoggedIn$ = this.store.pipe(select(fromUser.getUserStatus));
     this.user$ = this.store.pipe(select(fromUser.getCurrentUser));
-    this.themeService.setTheme(this.currentTheme.value);
+    this.currentTheme$ = this.store.pipe(
+      select(fromApp.getTheme),
+      tap(theme => {
+        this.themeOptions.forEach((opt) => {
+          if (opt.theme === theme) {
+            this.themeService.setTheme(opt.value);
+          }
+        });
+      })
+    );
   }
   switchLang(lang: string) {
     this.translate.use(lang);
@@ -45,8 +57,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.router.navigate(['login']);
   }
   changeTheme(themeToSet) {
-    console.log(themeToSet);
-    this.currentTheme = themeToSet;
-    this.themeService.setTheme(themeToSet);
+    this.store.dispatch(new appActions.SetTheme(themeToSet));
   }
 }
