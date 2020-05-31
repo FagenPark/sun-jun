@@ -1,4 +1,4 @@
-<div class="js-project-component" tabindex="0" (focus)="userFocusing = true" (blur)="userFocusing = false">
+<div class="js-project-component" tabindex="0" (focus)="focusHandler($event)" (blur)="focusHandler($event)" >
     <div class="project-card" *ngIf="!userFocusing"
          [ngStyle]="{'background' : 'url(' + cardUrl + ') center / contain no-repeat'}" [@zoomFadeInOutAnimation]></div>
     <div class="project-card-content flex flex-column" *ngIf="userFocusing" [@zoomFadeInOutAnimation]>
@@ -6,6 +6,6 @@
         <div class="project-title">{{projectTitle}}</div>
         <span class="project-sub">{{projectSubTitle}}</span>
       </div>
-      <a class="btn btn-link" [href]="projectUrl" target="_blank">LEARN MORE</a>
+      <a class="btn btn-link" (click)="goToProject($event, projectUrl)">LEARN MORE</a>
     </div>
 </div>

@@ -3,19 +3,64 @@ export const skillChartLabels = ['JavaScript/TypeScript', 'HTML', 'Angular', 'Re
 export const skillsData = [90, 80, 85, 70, 85, 70, 70];
 export const cards = [
   {
-    title: 'Alex',
-    description: 'Sunshine coast',
-    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/alex%20(2).jpg?alt=media&token=d6407574-bb65-4af4-97c6-d69eba1d0acf'
+    title: 'Me @ Manly',
+    description: '6/13/2018 Sydney',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/me_%40_manly.jpg?alt=media&token=37df1fc3-1251-44a7-a0ff-641730fc9375'
   },
   {
-    title: 'Coala',
-    description: 'Sunshine coast',
-    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/coala.jpg?alt=media&token=a8cdd159-6dd1-477c-84d6-b1cbd49f074e'
+    title: 'Yellow Mountain',
+    description: '4/16/2018 China and Au',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20180416_132636-PANO.jpg?alt=media&token=abf2a03a-bb41-4b24-836c-1d151b8f52ba'
+  },
+  {
+    title: 'Skiing @ Perisher',
+    description: '7/10/2018 Au',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/skii.jpg?alt=media&token=415de122-78cd-4aa6-8734-cf9a741cb71b'
+  },
+  {
+    title: 'Forbidden City ',
+    description: '1/10/2019 Beijing',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20190110_105359-PANO.jpg?alt=media&token=e27a8926-1869-4b9e-9376-1afd005d3ece'
+  },
+  {
+    title: 'Alex',
+    description: '10/07/2019 feeding fish',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/VID_20191007_145032-ANIMATION.gif?alt=media&token=19d9d9e2-584a-44b2-9963-76cf8bed22f6'
+  },
+  {
+    title: 'Sunshine coast',
+    description: '10/00/2018 Straw berry picking',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/sunshine_coast_10092018.jpg?alt=media&token=a3f64fa2-2f62-48c3-87d8-751143a493e0'
+  },
+  {
+    title: 'Yellow Mountain',
+    description: '4/28/2018 China',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20180428_094540-EFFECTS.jpg?alt=media&token=83f9fa72-828c-4988-9ac8-b6187a9a3935'
+  },
+  {
+    title: 'Manly Beach',
+    description: '10/08/2018',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20181008_201302-EFFECTS.jpg?alt=media&token=fe592fe9-5c98-4183-8786-25fd57daba4b'
   },
   {
     title: 'View',
-    description: '5/28/2017 SA',
-    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20170528_210326-COLLAGE.jpg?alt=media&token=4855eedf-4cec-499e-ae09-9f3c8c58fa59'
+    description: '4/22/2017 SA',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20170422_181431-EFFECTS.jpg?alt=media&token=801cd3a5-2d31-490d-8cff-9ce0c2b0fb0a'
+  },
+  {
+    title: 'Backyard',
+    description: '10/28/2017 jump into pool',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20171028_103501.jpg?alt=media&token=735ea06f-ca3b-47da-a9b9-c6c41149e219'
+  },
+  {
+    title: 'Me',
+    description: '4/16/2018 China and Au',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20180416_131200-COLLAGE.jpg?alt=media&token=ac84036e-3d66-4fad-ab07-ecdb99ae2e78'
+  },
+  {
+    title: 'Brisbane',
+    description: '10/07/2018',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20181007_090828-EFFECTS.jpg?alt=media&token=446b430e-f354-49da-ae0f-e2d3f1fc2378'
   },
   {
     title: 'Beach',
@@ -58,7 +103,7 @@ export const cards = [
     img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/EFFECTS%20(1).jpg?alt=media&token=e0a3022e-73f0-4c68-ba72-1c1f02f0d01b'
   },
   {
-    title: '三峡人家',
+    title: 'Three gorges',
     description: '10/06/2019',
     img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/EFFECTS%20(3).jpg?alt=media&token=db8a78e9-0577-4696-9038-ee864f29ded2'
   },
@@ -68,7 +113,7 @@ export const cards = [
     img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/EFFECTS%20(2).jpg?alt=media&token=57b909a2-6406-40c3-940a-16e4c649c9c0'
   },
   {
-    title: 'China random--',
+    title: 'China random',
     description: 'Three gorges trip',
     img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/EFFECTS.jpg?alt=media&token=67c927c1-7ed4-42bf-9eb8-b6d9ecf7749d'
   },
@@ -83,44 +128,9 @@ export const cards = [
     img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20170422_142008-EFFECTS.jpg?alt=media&token=6e729a7e-0b89-46e4-bda1-1c80bc21f4e6'
   },
   {
-    title: 'View',
-    description: '4/22/2017 SA',
-    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20170422_181431-EFFECTS.jpg?alt=media&token=801cd3a5-2d31-490d-8cff-9ce0c2b0fb0a'
-  },
-  {
-    title: 'Home',
-    description: '10/28/2017 Sydney',
-    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20171028_103501.jpg?alt=media&token=d1213b7d-e8d5-4dc7-81c6-b86f23bfd5d2'
-  },
-  {
-    title: 'Yellow Mountain',
-    description: '4/16/2018 China and Au',
-    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20180416_132636-PANO.jpg?alt=media&token=abf2a03a-bb41-4b24-836c-1d151b8f52ba'
-  },
-  {
     title: 'Hong Cun',
     description: '4/17/2018 China',
     img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20180417_102301.jpg?alt=media&token=a9afce47-f5bf-4933-8bac-90b960857ee8'
-  },
-  {
-    title: 'Yellow Mountain',
-    description: '4/28/2018 China',
-    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20180428_094540-EFFECTS.jpg?alt=media&token=83f9fa72-828c-4988-9ac8-b6187a9a3935'
-  },
-  {
-    title: 'Brisbane',
-    description: '10/07/2018',
-    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20181007_090828-EFFECTS.jpg?alt=media&token=446b430e-f354-49da-ae0f-e2d3f1fc2378'
-  },
-  {
-    title: 'Manly Beach',
-    description: '10/08/2018',
-    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20181008_201302-EFFECTS.jpg?alt=media&token=fe592fe9-5c98-4183-8786-25fd57daba4b'
-  },
-  {
-    title: 'Forbidden City ',
-    description: '1/10/2019 Beijing',
-    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20190110_105359-PANO.jpg?alt=media&token=e27a8926-1869-4b9e-9376-1afd005d3ece'
   },
   {
     title: 'Summer Palace ',
@@ -143,9 +153,24 @@ export const cards = [
     img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20191230_071612-EFFECTS.jpg?alt=media&token=6d2c59c9-3a05-45f8-8d98-949b1802c679'
   },
   {
+    title: 'Me',
+    description: '10/06/2019',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/MVIMG_20191006_114842-COLLAGE.jpg?alt=media&token=8f7ec735-da10-4a9e-ab53-ba432a0250bb'
+  },
+  {
     title: 'Alex',
-    description: '10/07/2019 feeding fish',
-    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/VID_20191007_145032-ANIMATION.gif?alt=media&token=19d9d9e2-584a-44b2-9963-76cf8bed22f6'
+    description: 'Sunshine coast',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/alex%20(2).jpg?alt=media&token=d6407574-bb65-4af4-97c6-d69eba1d0acf'
+  },
+  {
+    title: 'Koala',
+    description: 'Sunshine coast',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/coala.jpg?alt=media&token=a8cdd159-6dd1-477c-84d6-b1cbd49f074e'
+  },
+  {
+    title: 'Alex & Dad',
+    description: '5/28/2017 SA',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20170528_210326-COLLAGE.jpg?alt=media&token=4855eedf-4cec-499e-ae09-9f3c8c58fa59'
   },
   {
     title: 'Dennis',
@@ -158,24 +183,19 @@ export const cards = [
     img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20190108_140043.jpg?alt=media&token=806d1a7d-4a3c-430f-bc86-67b1ea3513cf'
   },
   {
-    title: 'Me',
-    description: '4/16/2018 China and Au',
-    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20180416_131200-COLLAGE.jpg?alt=media&token=ac84036e-3d66-4fad-ab07-ecdb99ae2e78'
-  },
-  {
     title: 'Hong Cun - Dennis',
     description: '4/17/2018 China',
     img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20180417_141426_1.jpg?alt=media&token=c564d9d2-94b8-4df8-bf93-327a36df2c8d'
   },
   {
-    title: 'Me',
-    description: '10/06/2019',
-    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/MVIMG_20191006_114842-COLLAGE.jpg?alt=media&token=8f7ec735-da10-4a9e-ab53-ba432a0250bb'
-  },
-  {
-    title: 'Me',
+    title: 'Me @ Gold Coast',
     description: '1/27/2018 Sydney',
     img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/IMG_20180127_063940.jpg?alt=media&token=fec8e755-1073-4c46-818c-7e6a4dd67b97'
+  },
+  {
+    title: 'Dancing',
+    description: '1/18/2020 Sydney',
+    img: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/VID_20200118_114846-ANIMATION.gif?alt=media&token=bff8674f-0ca9-45d9-836c-a1b4be12ebd1'
   }
 ];
 export const junProjects = [
@@ -213,7 +233,7 @@ export const junProjects = [
     pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/barcode-scanner.png?alt=media&token=504e2475-eea7-4fe9-b13a-82a341fe11c6',
     pTitle: 'Barcode Scanner',
     pSubTitle: 'TypeScript',
-    pUrl: 'https://ch-az-cdn-cleaningapp-01.azureedge.net/'
+    pUrl: 'https://www.choice.com.au/shopping-scanner'
   },
   {
     pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/css.png?alt=media&token=3d8e32e3-a05c-4783-bbce-f136d2cc3133',

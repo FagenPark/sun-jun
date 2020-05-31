@@ -7,16 +7,23 @@ import {zoomFadeInOutAnimation} from '../../animation-config';
   styleUrls: ['./project.component.scss'],
   animations: [zoomFadeInOutAnimation]
 })
-export class ProjectComponent implements OnInit {
+export class ProjectComponent {
   @Input() cardUrl: string;
   @Input() projectTitle: string;
   @Input() projectSubTitle: string;
   @Input() projectUrl: string;
   userFocusing = false;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
   }
 
+  goToProject(event, url) {
+    event.stopPropagation();
+    window.open(url, '_blank');
+  }
+
+  focusHandler(event) {
+    event.stopPropagation();
+    this.userFocusing = !this.userFocusing;
+  }
 }
