@@ -58,6 +58,11 @@ mdb-carousel {
       }
     }
   }
+  mdb-card-img {
+    img {
+      min-height: 140px;
+    }
+  }
 }
 
 @media screen and (min-width: 960px) {
