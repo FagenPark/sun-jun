@@ -262,3 +262,31 @@ export const stepper = trigger('routeAnimations', [
     ])
   ])
 ]);
+
+export const blurPage = trigger('routeAnimations', [
+  transition('* <=> *', [
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        left: 0,
+        width: '100%'
+      })
+    ], optional),
+    group([
+      query(':enter', [
+        animate('1200ms ease',  keyframes([
+          style({ offset: 0, filter: 'blur(3px) opacity(0)' }),
+          style({ offset: 0.35, filter: 'blur(2px) opacity(0.35)' }),
+          style({ offset: 1, filter: 'blur(3px) opacity(1)' }),
+        ]))
+      ], optional),
+      query(':leave', [
+        animate('1200ms ease',  keyframes([
+          style({ offset: 0, filter: 'blur(3px) opacity(1)' }),
+          style({ offset: 0.35, filter: 'blur(2px) opacity(0.35)' }),
+          style({ offset: 1, filter: 'blur(3px) opacity(0)' }),
+        ]))
+      ], optional)
+    ])
+  ])
+]);

@@ -1,6 +1,6 @@
-<app-header></app-header>
-<div [@routeAnimations]="prepareRoute(rootOutlet)" class="view-container">
-  <router-outlet #rootOutlet="outlet"></router-outlet>
-</div>
-<app-footer></app-footer>
+  <app-header></app-header>
+  <div [@routeAnimations]="prepareRoute(rootOutlet)" class="view-container">
+    <router-outlet #rootOutlet="outlet"></router-outlet>
+  </div>
+  <app-footer *ngIf="!isLoadingRoute"></app-footer>
 
