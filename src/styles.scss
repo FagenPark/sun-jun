@@ -1,31 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 101%; }
+html, body {
+  height: 101%;
+}
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background: var(--body-bg-color);
+
   .flex.row {
     flex-direction: row;
   }
+
   .flex {
     align-items: center;
     display: flex;
     justify-content: center;
   }
+
   .row {
     margin: 0;
   }
+
   #navbarCollapse {
     background-color: var(--navbar-bg-color);
   }
+
+  .visuallyhidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
   }
+}
 
 mdb-carousel {
   .carousel {
     .controls-top {
       margin-bottom: 1.88rem;
       text-align: center;
+
       .btn-floating {
         background: var(--primary-color);
         position: relative;
@@ -37,19 +56,22 @@ mdb-carousel {
         vertical-align: middle;
         cursor: pointer;
         border-radius: 50%;
-        -webkit-box-shadow: 0 5px 11px 0 rgba(255,255,255,0.18), 0 4px 15px 0 rgba(255,255,255,0.15);
-        box-shadow: 0 5px 11px 0 rgba(255,255,255,0.18), 0 4px 15px 0 rgba(255,255,255,0.15);
+        -webkit-box-shadow: 0 5px 11px 0 rgba(255, 255, 255, 0.18), 0 4px 15px 0 rgba(255, 255, 255, 0.15);
+        box-shadow: 0 5px 11px 0 rgba(255, 255, 255, 0.18), 0 4px 15px 0 rgba(255, 255, 255, 0.15);
         -webkit-transition: all .2s ease-in-out;
         transition: all .2s ease-in-out;
         width: 47px;
         height: 47px;
+
         i {
           line-height: 47px;
         }
       }
     }
+
     .carousel-indicators {
       margin-bottom: -5em;
+
       li {
         width: 1.25rem;
         height: 1.25rem;
@@ -58,6 +80,7 @@ mdb-carousel {
       }
     }
   }
+
   mdb-card-img {
     img {
       min-height: 140px;
