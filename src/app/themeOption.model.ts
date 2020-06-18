@@ -3,5 +3,6 @@ export interface ThemeOption {
   buttonColor: string;
   headingColor: string;
   label: string;
+  theme: string;
   value: string;
 }

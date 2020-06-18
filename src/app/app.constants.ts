@@ -1,3 +1,5 @@
+import {ThemeOption} from './themeOption.model';
+
 export const skillChartLabels = ['JavaScript/TypeScript', 'HTML', 'Angular', 'React', 'CSS', 'Node.js', '.Net'];
 export const skillsData = [90, 80, 85, 70, 85, 70, 70];
 export const cards = [
@@ -286,7 +288,7 @@ export const junProjects = [
     pUrl: 'https://maestro.avoka.com.au/web-plugin/servlet/SmartForm.html?formCode=floatinglabelinputs'
   }
 ];
-export const themeOptions = [
+export const themeOptions: ThemeOption[] = [
   {
     backgroundColor: '#303030',
     buttonColor: '#607d8b',
