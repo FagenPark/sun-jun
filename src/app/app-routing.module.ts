@@ -10,11 +10,11 @@ import {FirebaseAuthGuardService} from './auth/firebase-auth-guard.service';
 
 
 const routes: Routes = [
-  {path: 'home', component: LandingPageComponent, data: {animation: 'isLeft'}},
-  {path: 'profile', component: ProfileComponent, data: {animation: 'isRight'}},
-  {path: 'gallery', component: GalleryComponent, canActivate: [FirebaseAuthGuardService], data: {animation: 'isLeft'}},
-  {path: 'projects', component: ProjectsComponent, data: {animation: 'isRight'}},
-  { path:  'login', component:  LoginComponent, data: {animation: 'isRight'}},
+  {path: 'home', component: LandingPageComponent, data: {animation: 'home'}},
+  {path: 'profile', component: ProfileComponent, data: {animation: 'profile'}},
+  {path: 'gallery', component: GalleryComponent, canActivate: [FirebaseAuthGuardService], data: {animation: 'gallery'}},
+  {path: 'projects', component: ProjectsComponent, data: {animation: 'projects'}},
+  { path:  'login', component:  LoginComponent, data: {animation: 'login'}},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent, data: {animation: 'isRight'}},
 ];

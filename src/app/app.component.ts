@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {blurPage, stepper} from './animation-config';
+import {blurPage, slider, stepper} from './animation-config';
 import {NavigationEnd, NavigationStart, Router, RouterOutlet} from '@angular/router';
 import {concatMapTo, filter, take, takeWhile} from 'rxjs/operators';
 import {interval} from 'rxjs';
@@ -11,6 +11,7 @@ import {interval} from 'rxjs';
   animations: [
     blurPage
     // stepper
+    // slider
   ]
 })
 export class AppComponent implements OnInit, OnDestroy {
