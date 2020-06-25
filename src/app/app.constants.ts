@@ -295,7 +295,7 @@ export const themeOptions: ThemeOption[] = [
     headingColor: '#e91e63',
     label: 'Dark Theme',
     theme: 'dark',
-    value: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/css%2Fdark-theme.css?alt=media&token=acf442e1-6fe0-489b-8111-d232dfd17b1b'
+    value: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/css%2Fdark-theme.css?alt=media&token=dc6c021f-08de-495b-93f3-a322c00274d7'
   },
   {
     backgroundColor: '#fff',
@@ -303,6 +303,6 @@ export const themeOptions: ThemeOption[] = [
     headingColor: '#673ab7',
     label: 'Light Theme',
     theme: 'light',
-    value: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/css%2Flight-theme.css?alt=media&token=f4f38f9a-8884-4e07-b923-c38c817d3ef7'
+    value: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/css%2Flight-theme.css?alt=media&token=4ee3067b-fa87-436a-a003-9639bc02ae9c'
   }
 ];
