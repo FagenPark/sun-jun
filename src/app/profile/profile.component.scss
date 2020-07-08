@@ -1,5 +1,6 @@
 .js-profile-component {
   background: var(--profile-bg-img) no-repeat center center/cover;
+  background-attachment: fixed;
   color: var(--primary-font-color);
   min-height: calc(100vh + 53px);
   padding: 330px 0;

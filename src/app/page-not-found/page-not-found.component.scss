@@ -1,6 +1,7 @@
 .js-404 {
   justify-content: space-evenly;
   background: var(--404-bg-img) no-repeat center center/cover;
+  background-attachment: fixed;
   min-height: 100vh;
   padding: 130px 0;
   color: var(--primary-font-color);

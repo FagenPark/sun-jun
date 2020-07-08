@@ -1,5 +1,6 @@
 .js-gallery-component {
   background: var(--gallery-bg-img) no-repeat center center;
+  background-attachment: fixed;
   background-size: cover;
   color: var(--primary-font-color);
   min-height: calc(100vh + 50px);

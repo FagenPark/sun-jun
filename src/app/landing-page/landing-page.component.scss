@@ -1,5 +1,6 @@
 .view {
   background: var(--ld-bg-img) no-repeat center center;
+  background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
   .text {
@@ -40,6 +41,7 @@
   }
   .view {
     background: var(--navbar-bg-color) var(--ld-bg-img-mobile) no-repeat center center;
+    background-attachment: fixed;
     background-size: cover;
     .text {
       line-height: 80px;

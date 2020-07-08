@@ -1,6 +1,7 @@
 .js-login-component {
   background: var(--lgin-bg-img) no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
   color: var(--primary-font-color);
   min-height: calc(100vh + 50px);
   padding: 180px 0;
