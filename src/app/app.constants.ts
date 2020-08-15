@@ -270,10 +270,10 @@ export const junProjects = [
     pUrl: 'https://maestro.avoka.com.au/web-plugin/servlet/SmartForm.html?formCode=sbaccordion'
   },
   {
-    pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/barcode-scanner.png?alt=media&token=504e2475-eea7-4fe9-b13a-82a341fe11c6',
-    pTitle: 'Barcode Scanner',
+    pImage: 'https://ch-az-cdn-costofliving-01.azureedge.net/assets/images/bmc-media.png',
+    pTitle: 'Better Money',
     pSubTitle: 'TypeScript',
-    pUrl: 'https://www.choice.com.au/shopping-scanner'
+    pUrl: 'https://ch-az-cdn-costofliving-01.azureedge.net'
   },
   {
     pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/css.png?alt=media&token=3d8e32e3-a05c-4783-bbce-f136d2cc3133',
