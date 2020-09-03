@@ -240,7 +240,7 @@ export const cards = [
 ];
 export const junProjects = [
   {
-    pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/solar.png?alt=media&token=bb3730ef-97be-4a70-bfd5-43514b05c2bd',
+    pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/solar-es.jpg?alt=media&token=ff2f31f2-341e-4b09-8731-cdab43ddf67b',
     pTitle: 'Solar Estimator',
     pSubTitle: 'Angular/SiteCore',
     pUrl: 'https://www.choice.com.au/solar-estimator'
@@ -270,22 +270,22 @@ export const junProjects = [
     pUrl: 'https://maestro.avoka.com.au/web-plugin/servlet/SmartForm.html?formCode=sbaccordion'
   },
   {
-    pImage: 'https://ch-az-cdn-costofliving-01.azureedge.net/assets/images/bmc-media.png',
+    pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/fa-cartoon.png?alt=media&token=50be54d0-dccb-40aa-86cc-292e1853aeaf',
     pTitle: 'Better Money',
     pSubTitle: 'TypeScript',
     pUrl: 'https://ch-az-cdn-costofliving-01.azureedge.net'
   },
   {
-    pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/css.png?alt=media&token=3d8e32e3-a05c-4783-bbce-f136d2cc3133',
+    pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/accessibility.jpg?alt=media&token=31fea278-c58b-49e1-b16c-5f5f8f755132',
     pTitle: 'Carousels',
     pSubTitle: 'CSS HTML',
     pUrl: 'https://maestro.avoka.com.au/web-plugin/servlet/SmartForm.html?formCode=carousels'
   },
   {
-    pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/accessibility.jpg?alt=media&token=31fea278-c58b-49e1-b16c-5f5f8f755132',
-    pTitle: 'Floating Label Inputs',
-    pSubTitle: 'JavaScript',
-    pUrl: 'https://maestro.avoka.com.au/web-plugin/servlet/SmartForm.html?formCode=floatinglabelinputs'
+    pImage: 'https://firebasestorage.googleapis.com/v0/b/sun-jun-adventure.appspot.com/o/lower-rate.jpg?alt=media&token=e8839096-ed36-4577-952f-6395522fe571',
+    pTitle: 'Lower rate',
+    pSubTitle: 'TypeScript',
+    pUrl: 'https://cost-of-living-choice.web.app/home-loan'
   }
 ];
 export const themeOptions: ThemeOption[] = [
