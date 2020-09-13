@@ -64,7 +64,7 @@ export class FirebaseAuthService {
           return alert('Please check your email and click on the link to verify your email address.');
         }
         this.ngZone.run(() => {
-          setTimeout(() => {this.router.navigate([returnUrl]); }, 0);
+          setTimeout(() => {this.router.navigateByUrl(returnUrl); }, 0);
         });
       }).catch((error) => {
         alert(error.message);
@@ -85,7 +85,7 @@ export class FirebaseAuthService {
       .then((result) => {
         this.setUserData(result.user);
         this.ngZone.run(() => {
-          setTimeout(() => {this.router.navigate([returnUrl]); }, 0);
+          setTimeout(() => {this.router.navigateByUrl(returnUrl); }, 0);
         });
       }).catch((error) => {
         alert(error);

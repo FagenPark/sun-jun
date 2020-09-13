@@ -3,6 +3,11 @@
   background-color: var(--body-bg-color);
   width: 196px;
   height: 196px;
+  border: solid 1px #661515;
+  &:active, &:hover, &:focus {
+    outline: none;
+    border-color: #00a1ff;
+  }
   .project-card {
     cursor: pointer;
   }
