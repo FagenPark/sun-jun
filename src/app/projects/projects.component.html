@@ -1,7 +1,7 @@
 <div class="js-projects-component flex flex-column">
   <app-page-header headerAnimation="slide-in-left" pageHeader="{{'projects' | translate }}"></app-page-header>
-  <div class="flex projects-wrap">
-    <app-project *ngFor="let project of junProjects" [cardUrl]="project.pImage" [projectTitle]="project.pTitle"
+  <div class="flex projects-wrap" *ngIf="junProjects?.length > 0">
+    <app-project *ngFor="let project of junProjects; index as i; trackBy: trackByFn" [cardUrl]="project.pImage" [projectTitle]="project.pTitle"
                  [projectSubTitle]="project.pSubTitle"
                  [projectUrl]="project.pUrl"></app-project>
   </div>

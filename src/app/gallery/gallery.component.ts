@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import {cards} from '../app.constants';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {takeWhile, tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss']
 })
-export class GalleryComponent implements OnInit {
-  cards = cards;
-  slides: any = [[]];
+export class GalleryComponent implements OnInit, OnDestroy {
+  private isComponentActive = true;
+  slides: any[];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
   chunk(arr, chunkSize) {
     const R = [];
     for (let i = 0, len = arr.length; i < len; i += chunkSize) {
@@ -20,7 +21,17 @@ export class GalleryComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.slides = this.chunk(this.cards, 3);
+    this.http.get('assets/json/cards.json').pipe(
+      takeWhile(() => this.isComponentActive),
+      tap((c) => this.slides = this.chunk(c, 3))
+    ).subscribe();
+  }
+
+  ngOnDestroy(): void {
+    this.isComponentActive = false;
+  }
+  trackByFn(index: number, item: any): string | number {
+    return item?.id || index;
   }
 
 }
